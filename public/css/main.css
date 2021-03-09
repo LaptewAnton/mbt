@@ -1,0 +1,311 @@
+/*Спецификации*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    background-color: #eaeaea;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+input, textarea, select{
+    margin-bottom: 20px;
+}
+
+input[type='text'],
+input[type='email'], input[type='password'], textarea {
+    padding: 10px;
+    width: 100%;
+}
+
+input[type='checkbox'] {
+    background: none;
+    margin: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+a {
+    color: #3f3c3d;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex: 0 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-left: 10px;
+}
+
+textarea {
+    resize: none;
+}
+
+/*Скролл*/
+
+::-webkit-scrollbar{
+    background: #dddddd;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #555555;
+}
+
+/* Тень */
+
+.shadow {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/*Кнопка*/
+
+.button {
+    margin-bottom: 20px;
+    padding: 5px 20px 5px 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    background: none;
+    border: #c2c2c2 solid 1px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.button:hover{
+    color: #d9d9d9;
+    border: #383737 solid 1px;
+    background-color: #383737;
+}
+
+.button-group{
+    display: flex;
+}
+
+/*Меню*/
+
+.logo {
+    text-align: center;
+    margin-top: 250px;
+    margin-bottom: 120px;
+}
+
+.menu {
+    padding: 54px;
+}
+
+.menu-page {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+/* Шапка */
+
+header {
+    position: relative;
+    padding: 10px;
+}
+
+header h1 {
+    margin-top: 10px;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    background: #f8f9fa;
+}
+
+header .menu {
+    margin-bottom: 80px;
+    background-color: #f8f8f8;
+}
+
+.menu-item {
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+header .menu-page {
+    color: #3f3c3d;
+}
+
+/*Подвал*/
+
+footer {
+    margin-top: 80px;
+    background-color: #2f2f2f;
+}
+
+footer .menu {
+    box-shadow: none;
+}
+
+footer a {
+    color: #7d7d7d;
+}
+
+footer h2 {
+    color: #ffffff;
+}
+
+/* Авторизация/Регистрация */
+
+.form-auth {
+    background-color: #f8f8f8;
+    padding: 20px 35px 25px 35px;
+}
+
+.font-auth h3 {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.form-auth h4 {
+    font-weight: 300;
+    font-size: 16px;
+    padding: 15px 0 15px 0;
+}
+
+.auth-btn {
+    text-align: center;
+}
+
+.auth-checkbox {
+    margin-bottom: 20px;
+}
+
+/*Карточки заявок*/
+
+.card_item {
+    margin: 0 auto;
+    overflow:hidden;
+    position: relative;
+    width: 500px;
+    height: 360px;
+    margin-bottom: 40px;
+}
+
+.card_item-img {
+    width: 500px;
+    height: 300px;
+    text-align:center;
+    overflow:hidden;
+}
+
+.card_item-img img {
+    min-width:500px;
+    max-width:none;
+    height:300px;
+    margin:0 -100%
+}
+
+.card_item-title {
+
+}
+
+.card_item-about {
+    font-weight: 300;
+}
+
+/*Заявка*/
+
+.app {
+    background-color: #f8f8f8;
+    height: 440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.app-img{
+    overflow: hidden;
+}
+
+.app-img img{
+    max-width: 100%;
+    min-height: 440px;
+}
+
+.app_about {
+    width: 560px;
+    padding: 10px 30px 10px 0px;
+}
+
+.app_about-title {
+    margin-bottom: 30px;
+}
+
+.app_about-title h2 {
+    font-size: 32px;
+    color: #055555;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.app_about-title span {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.app_about-title a{
+    float: right;
+}
+
+.app-description {
+    width: 560px;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.app-description-title{
+    font-weight: 500;
+}
+
+.app-category{
+    display: flex;
+}
+
+.app-description::-webkit-scrollbar{
+    width: 3px;
+}
+
+.app-description p {
+    word-wrap: break-word;
+    padding: 10px;
+    margin-bottom: -10px;
+}
+
+/*.app-text {*/
+/*    word-wrap: break-word;*/
+/*}*/
+
+/*.app-overflow {*/
+/*    overflow: hidden;*/
+/*    text-overflow: ellipsis;*/
+/*}*/
+
+/*.app-name {*/
+/*    max-width: 400px;*/
+/*}*/
+
+/*.app-desc {*/
+/*    max-height: 200px;*/
+/*}*/
