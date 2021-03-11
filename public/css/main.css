@@ -206,19 +206,13 @@ footer h2 {
 .card_item-img {
     width: 500px;
     height: 300px;
-    text-align:center;
     overflow:hidden;
 }
 
 .card_item-img img {
-    min-width:500px;
-    max-width:none;
-    height:300px;
-    margin:0 -100%
-}
-
-.card_item-title {
-
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .card_item-about {
@@ -239,13 +233,14 @@ footer h2 {
 }
 
 .app-img img{
-    max-width: 100%;
-    min-height: 440px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .app_about {
     width: 560px;
-    padding: 10px 30px 10px 0px;
+    padding: 10px 30px 10px 0;
 }
 
 .app_about-title {

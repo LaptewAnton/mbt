@@ -22,18 +22,21 @@
                     <input maxlength="50" type="text" name="login" required placeholder="Логин">
                 </div>
                 <div>
-                    <input maxlength="50" type="password" name="password" required placeholder="Пароль">
+                    <input maxlength="50" type="password" id="password" name="password" required placeholder="Пароль">
                 </div>
                 <div>
-                    <input maxlength="50" type="password" name="password_repeat" required
+                    <input maxlength="50" type="password" id="password_confirmation" name="password_confirmation" required
                            placeholder="Подтвердите пароль">
+                </div>
+                <div id="message">
+
                 </div>
                 <div class="auth-checkbox">
                     <input value="1" class="form-check-inline" type="checkbox" name="check" required>
                     <label for="check">Согласие на обработку персональных данных:</label>
                 </div>
                 <div class="auth-btn">
-                    <button class="button" type="submit">Зарегистрироватся</button>
+                    <button class="button" id="regBtn" type="submit">Зарегистрироватся</button>
                     <p>Уже есть аккаунт? <a href="{{route('login')}}">Войти</a></p>
                 </div>
             </form>

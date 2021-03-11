@@ -26,8 +26,28 @@ $('#categoriesBtn').click(function () {
     $('.create').show();
 });
 
-/*Hover эффект для карточек заявок*/
+/*Проверка подтверждения пароля в регистрации*/
+$('#password, #password_confirmation').on('keyup', function () {
+    if ($('#password').val() == $('#password_confirmation').val()) {
+        $('#message').html('Пароли совпадают').addClass('alert alert-warning');
+    } else {
+        $('#message').html('Пароли не совпадают').addClass('alert alert-warning');
+        return false;
+    }
 
+});
+
+/*Выбор статуса в админ панели*/
+$('.callback').hide();
+$('#status').click(function(){
+   if ($('#status option:selected').val() != ""){
+       $('.callback').hide();
+       $('.callback_' + $("#status option:selected").val()).show();
+   }
+});
+
+
+/*Hover эффект для карточек заявок*/
 let sourceSwap = function () {
     let $this = $(this);
     let newSource = $this.data('alt-src');
@@ -36,5 +56,5 @@ let sourceSwap = function () {
 }
 
 $(function () {
-    $('img.xyz').hover(sourceSwap, sourceSwap);
+    $('img.app').hover(sourceSwap, sourceSwap);
 });

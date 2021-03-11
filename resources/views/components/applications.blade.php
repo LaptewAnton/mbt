@@ -3,7 +3,7 @@
         <div class="card_item status_{{$application->status_id}} col-6">
             <div class="card_item-img">
                 <a href="{{route('application.show', $application->id)}}">
-                    <img class="xyz" src="/img/{{$application->photo_after}}" data-alt-src="/img/{{$application->photo_before}}">
+                    <img class="app" src="/img/{{$application->photo_after}}" data-alt-src="/img/{{$application->photo_before}}">
                 </a>
             </div>
             <div class="card_item-title">

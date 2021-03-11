@@ -22,18 +22,17 @@ class AuthController extends Controller
 
     public function registration(Request $request)
     {
+        $this->validate($request, [
+            'password' => 'required|confirmed'
+        ]);
         if ($request->check == 1) {
-            if ($request->password == $request->password_repeat) {
-                User::create([
-                    'name' => $request->name,
-                    'email' => $request->email,
-                    'login' => $request->login,
-                    'password' => Hash::make($request->password),
-                ]);
-                return redirect(route('login'));
-            } else {
-                echo 'Пароль подтвержден неверно';
-            }
+            User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'login' => $request->login,
+                'password' => Hash::make($request->password),
+            ]);
+            return redirect(route('login'));
         } else {
             echo 'Согласитесь на обработку персональных данных для регистрации';
         }

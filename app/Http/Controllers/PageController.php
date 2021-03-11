@@ -11,7 +11,8 @@ class PageController extends Controller
     {
         return view('main',[
             'applications' => Application::with('category')
-                ->latest()->take(4)->get(),
+                ->where('status_id', '1')->latest()
+                ->take(4)->get(),
         ]);
     }
 }

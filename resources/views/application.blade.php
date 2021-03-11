@@ -7,7 +7,7 @@
 @section('content')
     <div class="app shadow">
         <div class="app-img">
-            <img src="/img/{{$application->photo_before}}" alt="{{$application->photo_before}}">
+            <img class="app" src="/img/{{$application->photo_before}}" data-alt-src="/img/{{$application->photo_after}}" alt="{{$application->photo_before}}">
         </div>
         <div class="app_about">
             <div class="app_about-title">
@@ -47,9 +47,9 @@
                             @endif
                         @endforeach
                     </select>
-                    <textarea placeholder="Комментарий администратора" maxlength="500" name="comment" id="" cols="30"
+                    <textarea class="callback callback_3" placeholder="Комментарий администратора" maxlength="500" name="comment" id="" cols="30"
                               rows="6"></textarea>
-                    <input type="file" class="form-control" name="photo_after">
+                    <input class="callback callback_2" type="file" class="form-control" name="photo_after">
                     <button type="submit" class="button">Отправить</button>
                 </form>
             </div>

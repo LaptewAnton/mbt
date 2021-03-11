@@ -23,7 +23,6 @@ Route::get('/application/{id}', 'ApplicationController@show')->name('application
 
 Route::group(['prefix' => 'profile', 'middleware' => 'auth'], function () {
     Route::get('/', 'UserController@profile')->name('profile');
-    Route::post('/update', 'UserController@update')->name('profile.update');
     Route::get('/logout', 'AuthController@logout')->name('logout');
 
     /*Создание заявки*/
